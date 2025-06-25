@@ -12,7 +12,7 @@ const config: Config = {
         // Child Arise Tennessee Brand Colors
         'earth-green': '#A3C9A8',
         'clay-beige': '#F7F3EF',
-        'moss-brown': '#5A5A42',
+        'moss-brown': '#000000', // Changed from #5A5A42 to black
         'sunlit-amber': '#E4CDA1',
         'fern': '#6C9A74',
         'river-blue': '#749DAF',
@@ -26,10 +26,15 @@ const config: Config = {
       },
       backgroundImage: {
         'hero-gradient': 'linear-gradient(180deg, #F7F3EF 0%, rgba(247, 243, 239, 0.6) 100%)',
+        'gradient-radial': 'radial-gradient(ellipse at center, var(--tw-gradient-stops))',
       },
       boxShadow: {
         'navbar': '0 1px 6px rgba(0,0,0,0.05)',
         'soft': '0 4px 20px rgba(0,0,0,0.08)',
+        'fern/20': '0 10px 30px rgba(108, 154, 116, 0.2)',
+        'sunlit-amber/20': '0 10px 30px rgba(228, 205, 161, 0.2)',
+        'earth-green/20': '0 10px 30px rgba(163, 201, 168, 0.2)',
+        'black/20': '0 10px 30px rgba(0, 0, 0, 0.2)',
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',

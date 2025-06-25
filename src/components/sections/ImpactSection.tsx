@@ -1,44 +1,44 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Users, GraduationCap, Heart, Calendar, Award, Target } from 'lucide-react';
+import { Users, MapPin, AlertTriangle, Home, Eye, TrendingUp } from 'lucide-react';
 
 const impactStats = [
   {
     icon: Users,
-    number: '2,500+',
-    label: 'Children Served',
-    description: 'Young lives positively impacted through our comprehensive programs'
+    number: '10%',
+    label: 'Tennessee Minors Affected',
+    description: 'Of minors in Tennessee have at least one parent incarcerated (~144,000 children)'
   },
   {
-    icon: Heart,
-    number: '500+',
-    label: 'Families Supported',
-    description: 'Caregivers and family units strengthened through our services'
+    icon: MapPin,
+    number: '#3',
+    label: 'National Ranking',
+    description: 'Tennessee is tied for 3rd in the nation for most justice-impacted youth'
   },
   {
-    icon: GraduationCap,
-    number: '85%',
-    label: 'Academic Improvement',
-    description: 'Of students show improved grades and school attendance'
+    icon: AlertTriangle,
+    number: '7%',
+    label: 'Nationwide Impact',
+    description: 'Of American children experience parental incarceration at some point in childhood'
   },
   {
-    icon: Calendar,
-    number: '15+',
-    label: 'Years of Service',
-    description: 'Dedicated commitment to our Nashville community'
+    icon: Eye,
+    number: '<31%',
+    label: 'Receive Visitors',
+    description: 'Less than 1/3 of prisoners in state prisons receive visitors'
   },
   {
-    icon: Award,
-    number: '150+',
-    label: 'Mentors Trained',
-    description: 'Volunteers equipped to provide meaningful support'
+    icon: Home,
+    number: '63%',
+    label: 'Far from Home',
+    description: 'Of incarcerated in state prisons are more than 100 miles from home'
   },
   {
-    icon: Target,
-    number: '95%',
-    label: 'Program Completion',
-    description: 'Participants successfully complete their support programs'
+    icon: TrendingUp,
+    number: '500%',
+    label: 'Rise Since 1980',
+    description: 'Increase in children with a father in prison or jail from 1980 to 2000'
   }
 ];
 
@@ -56,11 +56,11 @@ export function ImpactSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-lato font-bold text-moss-brown mb-6">
-            Making a Real Difference
+            The Need in Our Community
           </h2>
           <p className="text-xl text-moss-brown/80 max-w-3xl mx-auto leading-relaxed">
-            Through evidence-based programs and community partnerships, we&apos;re creating lasting positive change 
-            in the lives of children and families across Tennessee.
+            Understanding the scope and impact of parental incarceration helps us better serve 
+            children and families in Tennessee and across the nation.
           </p>
         </motion.div>
 

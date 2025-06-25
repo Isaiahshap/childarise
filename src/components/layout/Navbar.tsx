@@ -65,7 +65,7 @@ export function Navbar() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-8">
             {navItems.map((item) => (
               <motion.div
                 key={item.name}
@@ -83,7 +83,7 @@ export function Navbar() {
           </div>
 
           {/* Desktop CTA Button */}
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <Button variant="primary" href="/donate">
               Donate Now
             </Button>
@@ -92,7 +92,7 @@ export function Navbar() {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-lg text-moss-brown hover:bg-earth-green/20 transition-colors"
+            className="lg:hidden p-2 rounded-lg text-moss-brown hover:bg-earth-green/20 transition-colors"
             aria-label="Toggle mobile menu"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -108,7 +108,7 @@ export function Navbar() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden bg-clay-beige border-t border-earth-green/20"
+            className="lg:hidden bg-clay-beige border-t border-earth-green/20"
           >
             <div className="px-4 py-4 space-y-4">
               {navItems.map((item, index) => (

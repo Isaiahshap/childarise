@@ -27,7 +27,7 @@ export function Button({
   disabled = false,
   type = 'button'
 }: ButtonProps) {
-  const baseClasses = "inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-fern focus:ring-opacity-50 disabled:opacity-50 disabled:cursor-not-allowed";
+  const baseClasses = "inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed";
   
   const variantClasses = {
     primary: "bg-fern text-white hover:bg-fern-dark shadow-md hover:shadow-lg",

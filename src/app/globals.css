@@ -56,9 +56,9 @@
     @apply no-underline;
   }
   
-  /* Focus styles for accessibility */
+  /* Remove focus styles */
   *:focus {
-    @apply outline-none ring-2 ring-fern ring-opacity-50;
+    @apply outline-none;
   }
   
   /* Remove underlines globally */
