@@ -1,9 +1,8 @@
 'use client';
 
 import { motion, useInView } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, User, MessageSquare, Loader2 } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, User, MessageSquare, Loader2, Check } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
-import { ThankYouMessage } from '@/components/ui/ThankYouMessage';
 import { useRef, useState } from 'react';
 import Image from 'next/image';
 
@@ -23,8 +22,7 @@ export default function ContactPage() {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [showThankYou, setShowThankYou] = useState(false);
-  const [submittedName, setSubmittedName] = useState('');
+  const [isSuccess, setIsSuccess] = useState(false);
   const [error, setError] = useState('');
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -58,11 +56,8 @@ export default function ContactPage() {
       const result = await response.json();
       console.log('Email sent successfully:', result);
 
-      // Store name before resetting form
-      setSubmittedName(formData.name);
-      
-      // Show thank you message
-      setShowThankYou(true);
+      // Show success message
+      setIsSuccess(true);
       
       // Reset form
       setFormData({
@@ -72,6 +67,9 @@ export default function ContactPage() {
         subject: '',
         message: ''
       });
+
+      // Hide success message after 5 seconds
+      setTimeout(() => setIsSuccess(false), 5000);
     } catch (err) {
       console.error('Error sending email:', err);
       setError('Sorry, there was an error sending your message. Please try again or contact us directly at bethany@childarisetn.org');
@@ -80,15 +78,13 @@ export default function ContactPage() {
     }
   };
 
-  const handleCloseThankYou = () => {
-    setShowThankYou(false);
-  };
+
 
   const contactInfo = [
     {
       icon: Mail,
       title: 'Email Us',
-      details: 'bethany@childarisetn.org',
+      details: 'bethanyrmann@gmail.com',
       description: 'Send us an email and we will respond within 24 hours'
     },
     {
@@ -380,8 +376,8 @@ export default function ContactPage() {
                   (615) 490-1844
                 </a>{' '}
                 or email{' '}
-                <a href="mailto:bethany@childarisetn.org" className="text-fern font-semibold hover:underline">
-                  bethany@childarisetn.org
+                <a href="mailto:bethanyrmann@gmail.com" className="text-fern font-semibold hover:underline">
+                  bethanyrmann@gmail.com
                 </a>{' '}
                 directly.
               </p>
@@ -418,12 +414,17 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Thank You Message Modal */}
-      {showThankYou && (
-        <ThankYouMessage 
-          name={submittedName || 'Friend'} 
-          onClose={handleCloseThankYou} 
-        />
+      {/* Success Message */}
+      {isSuccess && (
+        <motion.div
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -50 }}
+          className="fixed top-4 right-4 bg-fern text-white px-6 py-4 rounded-lg shadow-lg z-50 flex items-center gap-3"
+        >
+          <Check className="w-5 h-5" />
+          <span>Message sent! Check your email for confirmation.</span>
+        </motion.div>
       )}
     </div>
   );

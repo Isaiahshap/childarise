@@ -18,13 +18,13 @@ export async function POST(request: NextRequest) {
 
     // Send email to Child Arise Tennessee
     await resend.emails.send({
-      from: 'Contact Form <onboarding@resend.dev>', // This will be the sender
-      to: ['bethany@childarisetn.org'], // Child Arise Tennessee email
+      from: 'Child Arise Tennessee Contact <bethanyrmann@gmail.com>', // Using verified email
+      to: [ 'bethanyrmann@gmail.com'], // Child Arise Tennessee emails
       subject: `Contact Form: ${subject}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
           <div style="text-align: center; margin-bottom: 30px;">
-            <img src="https://childarisetn.org/images/logo.png" alt="Child Arise Tennessee" style="height: 60px;" />
+            <img src="https://childarisetn.com/images/logo.png" alt="Child Arise Tennessee" style="height: 60px;" />
             <h1 style="color: #6C9A74; margin: 20px 0;">New Contact Form Submission</h1>
           </div>
           
@@ -52,13 +52,13 @@ export async function POST(request: NextRequest) {
 
     // Send confirmation email to the person who submitted the form
     await resend.emails.send({
-      from: 'Child Arise Tennessee <onboarding@resend.dev>',
+      from: 'Child Arise Tennessee <bethanyrmann@gmail.com>',
       to: [email],
       subject: 'Thank you for contacting Child Arise Tennessee',
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
           <div style="text-align: center; margin-bottom: 30px;">
-            <img src="https://childarisetn.org/images/logo.png" alt="Child Arise Tennessee" style="height: 80px;" />
+            <img src="https://childarisetn.com/images/logo.png" alt="Child Arise Tennessee" style="height: 80px;" />
             <h1 style="color: #6C9A74; margin: 20px 0;">Thank You for Reaching Out!</h1>
           </div>
           
@@ -68,20 +68,25 @@ export async function POST(request: NextRequest) {
           </div>
           
           <div style="background: #fff; padding: 25px; border-radius: 10px; border: 2px solid #A3C9A8; margin-bottom: 30px;">
-            <h3 style="color: #6C9A74; margin-top: 0;">Your Message Summary</h3>
-            <p><strong>Subject:</strong> ${subject}</p>
-            <p><strong>Message:</strong></p>
-            <div style="background: #F7F3EF; padding: 15px; border-radius: 8px; border-left: 4px solid #6C9A74;">
-              <p style="margin: 0; line-height: 1.6;">${message.replace(/\n/g, '<br>')}</p>
+            <h3 style="color: #6C9A74; margin-top: 0;">Your Complete Message</h3>
+            <div style="margin-bottom: 20px;">
+              <p style="margin: 0 0 10px 0;"><strong>Subject:</strong> ${subject}</p>
+              <p style="margin: 0;"><strong>Your Full Message:</strong></p>
             </div>
+            <div style="background: #F7F3EF; padding: 20px; border-radius: 8px; border-left: 4px solid #6C9A74; margin-top: 15px;">
+              <p style="margin: 0; line-height: 1.8; font-size: 16px; color: #333;">${message.replace(/\n/g, '<br>')}</p>
+            </div>
+            <p style="margin: 15px 0 0 0; font-size: 14px; color: #666; font-style: italic;">
+              We have received the complete message above and will respond accordingly.
+            </p>
           </div>
           
           <div style="background: #6C9A74; color: white; padding: 25px; border-radius: 10px; text-align: center;">
             <h3 style="margin: 0 0 15px 0;">While you're here...</h3>
             <p style="margin: 0 0 20px 0;">Learn more about our mission to support children and families affected by parental incarceration.</p>
             <div style="margin-top: 20px;">
-              <a href="https://childarisetn.org/about" style="background: white; color: #6C9A74; padding: 12px 24px; text-decoration: none; border-radius: 8px; font-weight: bold; margin: 0 10px;">About Us</a>
-              <a href="https://childarisetn.org/donate" style="background: #E4CDA1; color: #000; padding: 12px 24px; text-decoration: none; border-radius: 8px; font-weight: bold; margin: 0 10px;">Donate</a>
+              <a href="https://childarisetn.com/about" style="background: white; color: #6C9A74; padding: 12px 24px; text-decoration: none; border-radius: 8px; font-weight: bold; margin: 0 10px;">About Us</a>
+              <a href="https://childarisetn.com/donate" style="background: #E4CDA1; color: #000; padding: 12px 24px; text-decoration: none; border-radius: 8px; font-weight: bold; margin: 0 10px;">Donate</a>
             </div>
           </div>
           
