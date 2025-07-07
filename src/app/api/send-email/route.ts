@@ -94,7 +94,7 @@ export async function POST(request: NextRequest) {
             <p style="color: #666; font-size: 14px; margin: 0;">
               <strong>Child Arise Tennessee</strong><br>
               Nashville, Tennessee<br>
-              <a href="mailto:bethany@childarisetn.org" style="color: #6C9A74;">bethany@childarisetn.org</a> | 
+              <a href="mailto:bethanyrmann@gmail.com" style="color: #6C9A74;">bethanyrmann@gmail.com</a> | 
               <a href="tel:6154901844" style="color: #6C9A74;">(615) 490-1844</a>
             </p>
           </div>
