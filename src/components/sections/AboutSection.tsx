@@ -4,9 +4,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 
 const images = [
-  { src: '/images/hero-bg1.png', alt: 'Mentorship in action' },
-  { src: '/images/hero-bg2.png', alt: 'Family connection event' },
-  { src: '/images/copium.png', alt: 'Art therapy session' },
+  { src: '/images/1 (2).webp', alt: 'Mentorship in action' },
+  { src: '/images/2 (1).webp', alt: 'Family connection event' },
+  { src: '/images/3 (1).webp', alt: 'Art therapy session' },
 ];
 
 export function AboutSection() {

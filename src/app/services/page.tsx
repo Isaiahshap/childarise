@@ -20,7 +20,7 @@ const services = [
       "Crisis Intervention Services",
     ],
     impact: "Students show improved emotional regulation and resilience",
-    image: "/images/services/service1.jpg",
+    image: "/images/1 (2).webp",
   },
   {
     icon: Users,
@@ -35,7 +35,7 @@ const services = [
       "Youth Leadership Development",
     ],
     impact: "Enhanced self-esteem and improved life outcomes",
-    image: "/images/services/service2.jpg",
+    image: "/images/2 (1).webp",
   },
   {
     icon: GraduationCap,
@@ -50,7 +50,7 @@ const services = [
       "Scholarship Assistance",
     ],
     impact: "Improved academic performance and college enrollment rates",
-    image: "/images/services/service3.jpg",
+    image: "/images/3 (1).webp",
   },
   {
     icon: Video,
@@ -65,7 +65,7 @@ const services = [
       "Communication Facilitation",
     ],
     impact: "Stronger family connections and improved relationships",
-    image: "/images/services/service4.jpg",
+    image: "/images/4 (1).webp",
   },
   {
     icon: Home,
@@ -80,7 +80,7 @@ const services = [
       "Family Strengthening Programs",
     ],
     impact: "Increased caregiver confidence and family stability",
-    image: "/images/services/service5.jpg",
+    image: "/images/5 (1).webp",
   },
   {
     icon: Calendar,
@@ -95,7 +95,7 @@ const services = [
       "Youth Leadership Opportunities",
     ],
     impact: "Enhanced creativity, leadership skills, and self-confidence",
-    image: "/images/services/service6.jpg",
+    image: "/images/hero-bg.png",
   },
 ];
 
@@ -214,7 +214,7 @@ export default function ServicesPage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-center bg-white/60 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-white/20 shadow-lg"
+            className="text-center bg-white/60 rounded-3xl p-8 md:p-12 border border-white/20 shadow-lg relative z-0"
           >
             <h2 className="text-3xl md:text-4xl font-lato font-bold text-black mb-6">
               Ready to Make a Difference?

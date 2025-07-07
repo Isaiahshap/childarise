@@ -47,12 +47,12 @@ export default function ContactPage() {
       icon: Mail,
       title: 'Email Us',
       details: 'bethany@childarisetn.org',
-      description: 'Send us an email and we&apos;ll respond within 24 hours'
+      description: 'Send us an email and we will respond within 24 hours'
     },
     {
       icon: Phone,
       title: 'Call Us',
-      details: '(615) 555-0123',
+      details: '(615) 490-1844',
       description: 'Monday - Friday, 9:00 AM - 5:00 PM CST'
     },
     {
@@ -105,7 +105,7 @@ export default function ContactPage() {
             </h1>
             <p className="text-xl md:text-2xl text-black/80 leading-relaxed mb-8">
               Ready to make a difference? Have questions about our programs? 
-              We&apos;d love to hear from you and explore how we can work together.
+              We would love to hear from you and explore how we can work together.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
