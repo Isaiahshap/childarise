@@ -1,8 +1,9 @@
 'use client';
 
 import { motion, useInView } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, User, MessageSquare } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, User, MessageSquare, Loader2 } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
+import { ThankYouMessage } from '@/components/ui/ThankYouMessage';
 import { useRef, useState } from 'react';
 import Image from 'next/image';
 
@@ -21,25 +22,66 @@ export default function ContactPage() {
     message: ''
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showThankYou, setShowThankYou] = useState(false);
+  const [submittedName, setSubmittedName] = useState('');
+  const [error, setError] = useState('');
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value
     }));
+    // Clear error when user starts typing
+    if (error) setError('');
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // This is a fake form for now
-    alert('Thank you for your message! We will get back to you soon.');
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      subject: '',
-      message: ''
-    });
+    setIsSubmitting(true);
+    setError('');
+
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send email');
+      }
+
+      const result = await response.json();
+      console.log('Email sent successfully:', result);
+
+      // Store name before resetting form
+      setSubmittedName(formData.name);
+      
+      // Show thank you message
+      setShowThankYou(true);
+      
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        subject: '',
+        message: ''
+      });
+    } catch (err) {
+      console.error('Error sending email:', err);
+      setError('Sorry, there was an error sending your message. Please try again or contact us directly at bethany@childarisetn.org');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const handleCloseThankYou = () => {
+    setShowThankYou(false);
   };
 
   const contactInfo = [
@@ -296,23 +338,48 @@ export default function ContactPage() {
                 </div>
               </div>
 
+              {/* Error Message */}
+              {error && (
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg"
+                >
+                  {error}
+                </motion.div>
+              )}
+
               <div className="text-center">
                 <Button 
                   type="submit"
                   variant="primary" 
                   size="lg"
+                  disabled={isSubmitting}
                   className="inline-flex items-center gap-2"
                 >
-                  <Send className="w-5 h-5" />
-                  Send Message
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="w-5 h-5 animate-spin" />
+                      Sending...
+                    </>
+                  ) : (
+                    <>
+                      <Send className="w-5 h-5" />
+                      Send Message
+                    </>
+                  )}
                 </Button>
               </div>
             </form>
 
             <div className="mt-8 p-6 bg-fern/5 rounded-2xl border border-fern/20">
               <p className="text-sm text-moss-brown/80 text-center">
-                <strong>Note:</strong> This is a demonstration form. For immediate assistance, 
-                please email{' '}
+                <strong>Note:</strong> For immediate assistance or urgent matters, 
+                please call us at{' '}
+                <a href="tel:6154901844" className="text-fern font-semibold hover:underline">
+                  (615) 490-1844
+                </a>{' '}
+                or email{' '}
                 <a href="mailto:bethany@childarisetn.org" className="text-fern font-semibold hover:underline">
                   bethany@childarisetn.org
                 </a>{' '}
@@ -350,6 +417,14 @@ export default function ContactPage() {
           </motion.div>
         </div>
       </section>
+
+      {/* Thank You Message Modal */}
+      {showThankYou && (
+        <ThankYouMessage 
+          name={submittedName || 'Friend'} 
+          onClose={handleCloseThankYou} 
+        />
+      )}
     </div>
   );
 } 
