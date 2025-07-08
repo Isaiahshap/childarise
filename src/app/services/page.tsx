@@ -14,7 +14,7 @@ const services = [
     description:
       "Professional counseling and therapy services designed specifically for children and families navigating the complex emotions of parental incarceration.",
     features: [
-      "Individual Therapy Sessions",
+      "Clinical One-on-One Support",
       "Group Therapy Programs",
       "School-Based Mental Health Support",
       "Crisis Intervention Services",

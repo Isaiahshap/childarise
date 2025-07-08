@@ -24,7 +24,7 @@ export async function POST(request: NextRequest) {
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
           <div style="text-align: center; margin-bottom: 30px;">
-            <img src="https://childarisetn.com/images/logo.png" alt="Child Arise Tennessee" style="height: 60px;" />
+            <img src="https://childarisetn.org/images/logo.png" alt="Child Arise Tennessee" style="height: 60px;" />
             <h1 style="color: #6C9A74; margin: 20px 0;">New Contact Form Submission</h1>
           </div>
           
@@ -58,7 +58,7 @@ export async function POST(request: NextRequest) {
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
           <div style="text-align: center; margin-bottom: 30px;">
-            <img src="https://childarisetn.com/images/logo.png" alt="Child Arise Tennessee" style="height: 80px;" />
+            <img src="https://childarisetn.org/images/logo.png" alt="Child Arise Tennessee" style="height: 80px;" />
             <h1 style="color: #6C9A74; margin: 20px 0;">Thank You for Reaching Out!</h1>
           </div>
           
@@ -85,8 +85,8 @@ export async function POST(request: NextRequest) {
             <h3 style="margin: 0 0 15px 0;">While you're here...</h3>
             <p style="margin: 0 0 20px 0;">Learn more about our mission to support children and families affected by parental incarceration.</p>
             <div style="margin-top: 20px;">
-              <a href="https://childarisetn.com/about" style="background: white; color: #6C9A74; padding: 12px 24px; text-decoration: none; border-radius: 8px; font-weight: bold; margin: 0 10px;">About Us</a>
-              <a href="https://childarisetn.com/donate" style="background: #E4CDA1; color: #000; padding: 12px 24px; text-decoration: none; border-radius: 8px; font-weight: bold; margin: 0 10px;">Donate</a>
+              <a href="https://childarisetn.org/about" style="background: white; color: #6C9A74; padding: 12px 24px; text-decoration: none; border-radius: 8px; font-weight: bold; margin: 0 10px;">About Us</a>
+              <a href="https://childarisetn.org/donate" style="background: #E4CDA1; color: #000; padding: 12px 24px; text-decoration: none; border-radius: 8px; font-weight: bold; margin: 0 10px;">Donate</a>
             </div>
           </div>
           

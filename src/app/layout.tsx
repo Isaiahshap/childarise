@@ -27,14 +27,14 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://childarisetennessee.com"),
+  metadataBase: new URL("https://childarisetn.org"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://childarisetennessee.com",
+    url: "https://childarisetn.org",
     siteName: "Child Arise Tennessee",
     title: "Child Arise Tennessee | Supporting Children of Incarcerated Parents",
     description: "Providing comprehensive support for children and families impacted by parental incarceration through counseling, mentorship, education, and community connection.",
