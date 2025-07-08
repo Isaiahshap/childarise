@@ -18,7 +18,7 @@ export async function POST(request: NextRequest) {
 
     // Send email to Child Arise Tennessee
     await resend.emails.send({
-      from: 'Contact Form <noreply@childarisetn.com>', // Use verified domain
+      from: 'Contact Form <noreply@childarisetn.org>', // Use verified domain
       to: ['bethany@childarisetn.org', 'bethanyrmann@gmail.com'], // Child Arise Tennessee emails
       subject: `Contact Form: ${subject}`,
       html: `
@@ -52,7 +52,7 @@ export async function POST(request: NextRequest) {
 
     // Send confirmation email to the person who submitted the form
     await resend.emails.send({
-      from: 'Child Arise Tennessee <noreply@childarisetn.com>',
+      from: 'Child Arise Tennessee <noreply@childarisetn.org>',
       to: [email],
       subject: 'Thank you for contacting Child Arise Tennessee',
       html: `
