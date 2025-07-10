@@ -53,8 +53,8 @@ export function Navbar() {
                 className="h-10 md:h-12 w-auto"
                 priority
               />
-              <div className="hidden sm:block">
-                <div className="text-lg md:text-xl font-lato font-bold text-moss-brown group-hover:text-fern transition-colors">
+              <div className="block">
+                <div className="text-sm sm:text-lg md:text-xl font-lato font-bold text-moss-brown group-hover:text-fern transition-colors">
                   Child Arise Tennessee
                 </div>
                 <div className="text-xs md:text-sm text-moss-brown/70 font-medium">
