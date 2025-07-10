@@ -244,7 +244,7 @@ export default function AboutPage() {
           </div>
 
           {/* Linda Manning - Text Left, Image Right */}
-          <div className="bg-white rounded-2xl p-8 md:p-12 shadow-lg border border-gray-100">
+          <div className="bg-white rounded-2xl p-8 md:p-12 shadow-lg border border-gray-100 mb-12">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               <div className="order-2 lg:order-1">
                 <h3 className="text-3xl md:text-4xl font-lato font-bold text-black mb-3">
@@ -274,6 +274,112 @@ export default function AboutPage() {
                     sizes="(max-width: 768px) 100vw, 256px"
                   />
                 </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Dan Mann - Image Left, Text Right */}
+          <div className="bg-white rounded-2xl p-8 md:p-12 shadow-lg border border-gray-100 mb-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+              <div className="order-2 lg:order-1">
+                <div className="w-64 h-64 mx-auto relative rounded-2xl overflow-hidden shadow-lg">
+                  <Image
+                    src="/images/dan.jpg"
+                    alt="Dan Mann"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 256px"
+                  />
+                </div>
+              </div>
+              
+              <div className="order-1 lg:order-2">
+                <h3 className="text-3xl md:text-4xl font-lato font-bold text-black mb-3">
+                  Dan Mann
+                </h3>
+                <div className="text-lg font-semibold text-fern mb-6 border-l-4 border-fern pl-4">
+                  Board Member & Advocate
+                </div>
+                <p className="text-lg text-black/80 leading-relaxed mb-4">
+                  For over 40 years Dan has worked in and around Nashville&apos;s music business. He began 
+                  by booking Christian music acts into churches and conference centers. Booking 
+                  success led to several years working in record company management and artist 
+                  personal management. He is currently back in the agency business.
+                </p>
+                <p className="text-lg text-black/80 leading-relaxed mb-4">
+                  During his career, his passion for social justice provided opportunities to work with 
+                  Romanian orphanages, provide medical equipment to hospitals and clinics in India and 
+                  to address cooperation for social justice at an ecumenical conference held at the 
+                  Vatican.
+                </p>
+                <p className="text-lg text-black/80 leading-relaxed">
+                  Since 2010, Dan and his wife Bethany have visited the men on Tennessee&apos;s Death 
+                  Row. During this time, Dan has advocated for their humane treatment before the 
+                  governor, before prominent pastors, and in the press. Five times Dan has helped 
+                  organize a march for mercy prior to executions in Tennessee; marching the nine miles 
+                  from Death Row to the State Capitol in order to present the Governor with petitions.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Dr. Sally Barton-Arwood - Text Only */}
+          <div className="bg-white rounded-2xl p-8 md:p-12 shadow-lg border border-gray-100">
+            <div className="max-w-4xl mx-auto">
+              <h3 className="text-3xl md:text-4xl font-lato font-bold text-black mb-3">
+                Dr. Sally Barton-Arwood
+              </h3>
+              <div className="text-lg font-semibold text-earth-green mb-6 border-l-4 border-earth-green pl-4">
+                Board Member
+              </div>
+              <div className="text-lg text-black/80 leading-relaxed space-y-4">
+                <p>
+                  Dr. Sally Barton-Arwood brings over 30 years of experience in education, child advocacy, and 
+                  trauma-informed practice to her role as a board member for Child Arise Tennessee. A lifelong 
+                  educator and justice-driven leader, Sally&apos;s work is rooted in the enduring words of the prophet 
+                  Micah: &quot;He has told you, O mortal, what is good; and what does the Lord require of you but to do 
+                  justice, and to love kindness, and to walk humbly with your God?&quot; (Micah 6:8). These words have 
+                  guided her life&apos;s calling—to walk alongside children and families with humility, to lead with 
+                  compassion, and to challenge systems that fail to serve our most vulnerable.
+                </p>
+                <p>
+                  As a board member of Child Arise Tennessee, Sally offers strategic insight into education systems, 
+                  disability advocacy, and community-based partnerships. She believes that proximity eradicates 
+                  stigma and that justice-impacted children deserve consistent relationships, meaningful 
+                  opportunities, and the right to tell their own stories without shame.
+                </p>
+                <p>
+                  Sally has worked directly with children and families across public, private, and nonprofit settings, 
+                  including roles as a special education teacher, school administrator, and behavior specialist in Metro 
+                  Nashville Public Schools. In these roles, she developed schoolwide behavior support systems and 
+                  created individualized plans for children facing significant barriers to success. Her belief in the 
+                  inherent worth of every child drives her commitment to inclusive practices and equitable access.
+                </p>
+                <p>
+                  Currently a professor of education at Belmont University, Dr. B.—as her students affectionately call 
+                  her—prepares future educators to serve with empathy, cultural humility, and purpose. Her teaching 
+                  centers on trauma-informed, inclusive, and justice-centered approaches, reflecting the same values 
+                  that shape Child Arise&apos;s mission. As part of her teaching, Sally founded and continues to lead a 
+                  program that supports children with disabilities and their families—a space where her students 
+                  engage directly in practices of inclusion, equity, and community-building.
+                </p>
+                <p>
+                  Sally&apos;s research and consulting work focus on emotional and behavioral supports, service-learning, 
+                  and systems that uphold the dignity of all children—particularly those affected by trauma and 
+                  systemic inequities. She has published widely and presented nationally and internationally on topics 
+                  such as equitable classroom practices, collaborative school culture, and inclusion.
+                </p>
+                <p>
+                  Outside of her professional work, Sally finds renewal in the natural world, joy in cooking, and 
+                  spiritual grounding in worship at Christ Church Cathedral. Whether paddling, reading, painting, or 
+                  playing the piano (with more passion than precision), she embraces reflection, imagination, and 
+                  community as vital parts of a well-lived life. These experiences fuel her creativity, restore her 
+                  energy, and remind her of the beauty in both stillness and service.
+                </p>
+                <p>
+                  Sally is honored to support Child Arise&apos;s work where children impacted by incarceration are 
+                  embraced with acceptance, surrounded by advocacy, and empowered with access.
+                </p>
               </div>
             </div>
           </div>

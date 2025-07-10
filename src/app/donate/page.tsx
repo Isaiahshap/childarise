@@ -239,21 +239,10 @@ export default function DonatePage() {
             viewport={{ once: true }}
             className="text-center"
           >
-            <h3 className="text-lg font-lato font-semibold text-moss-brown mb-4">Important Information</h3>
+            <h3 className="text-lg font-lato font-semibold text-moss-brown mb-4">Donation Disclaimer (Pre-501(c)(3) Status Approval)</h3>
             <div className="bg-white rounded-xl p-6 shadow-sm border border-earth-green/20">
-              <p className="text-sm text-black/70 leading-relaxed mb-4">
-                <strong>Disclaimer:</strong> Child Arise Tennessee is a 501(c)(3) nonprofit organization. 
-                Donation amounts mentioned are examples of how contributions may be used to support our programs. 
-                Actual program costs vary and donations are pooled to support all areas of our mission.
-              </p>
-              <p className="text-sm text-black/70 leading-relaxed mb-4">
-                Impact statements reflect our program goals and general outcomes. Individual results may vary. 
-                We are committed to using donations efficiently and effectively to serve children and families 
-                affected by parental incarceration.
-              </p>
               <p className="text-sm text-black/70 leading-relaxed">
-                Your donation is tax-deductible to the extent allowed by law. You will receive a receipt 
-                for your records. For questions about our programs or financials, please contact us directly.
+                Child Arise Tennessee is a registered nonprofit public benefit corporation and charitable organization in the State of Tennessee. We have submitted our application for 501(c)(3) federal tax-exempt status with the IRS (February 2025) and are currently awaiting approval. While donations may be tax-deductible under state law, federal tax-deductibility is not guaranteed until our 501(c)(3) status is officially approved. We will notify donors once our determination is received. Please consult your tax advisor for guidance on charitable contributions.
               </p>
             </div>
           </motion.div>

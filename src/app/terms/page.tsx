@@ -49,9 +49,9 @@ export default function TermsOfServicePage() {
 
               <h2 className="text-2xl font-semibold text-black mb-4">2. About Child Arise Tennessee</h2>
               <p className="text-black/80 mb-6">
-                Child Arise Tennessee is a 501(c)(3) nonprofit organization dedicated to providing hope, healing, 
-                and opportunity for children and families affected by parental incarceration. We provide comprehensive 
-                support services including counseling, mentorship, education, and community connection programs.
+                Child Arise Tennessee is a registered public benefit nonprofit corporation and charitable 
+                organization in the State of Tennessee. We have applied for 501(c)(3) federal tax-exempt 
+                status with the IRS and are currently awaiting approval.
               </p>
 
               <h2 className="text-2xl font-semibold text-black mb-4">3. Services Provided</h2>
@@ -153,9 +153,15 @@ export default function TermsOfServicePage() {
 
               <h2 className="text-2xl font-semibold text-black mb-4">12. Donations and Fundraising</h2>
               <p className="text-black/80 mb-6">
-                Donations to Child Arise Tennessee are tax-deductible to the extent allowed by law. All donations 
-                are used to support our mission and programs. We reserve the right to use donations for our 
-                general operating expenses unless specifically designated otherwise by the donor.
+                Child Arise Tennessee is a registered public benefit nonprofit corporation in Tennessee and is 
+                recognized as a charitable organization by the State. We submitted our application for 501(c)(3) 
+                federal tax-exempt status to the IRS in February 2025 and are currently awaiting approval.
+              </p>
+              <p className="text-black/80 mb-6">
+                Donations may be tax-deductible to the extent allowed by law. Please consult your tax advisor 
+                regarding the deductibility of your contribution. Once our 501(c)(3) determination is received, 
+                we will update donors accordingly. Unless specifically designated, all donations will be used 
+                to support our mission and general operations.
               </p>
 
               <h2 className="text-2xl font-semibold text-black mb-4">13. Termination of Services</h2>

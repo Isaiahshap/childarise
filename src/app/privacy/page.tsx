@@ -145,6 +145,10 @@ export default function PrivacyPolicyPage() {
               <p className="text-black/80 mb-6">
                 These services have their own privacy policies and terms of use.
               </p>
+              <p className="text-black/80 mb-6">
+                Please note that Child Arise Tennessee is awaiting 501(c)(3) tax-exempt approval from the IRS, 
+                and we encourage donors to consult with a tax advisor regarding deductibility.
+              </p>
 
               <h2 className="text-2xl font-semibold text-black mb-4">9. Data Retention</h2>
               <p className="text-black/80 mb-6">
