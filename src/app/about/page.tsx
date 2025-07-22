@@ -286,7 +286,7 @@ export default function AboutPage() {
                   src="/images/dan.webp"
                   alt="Dan Mann"
                   fill
-                  className="object-cover object-center lg:object-left-center"
+                  className="object-cover object-center lg:object-[80%_center]"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-b lg:bg-gradient-to-r from-transparent via-white/20 to-white"></div>
@@ -326,7 +326,7 @@ export default function AboutPage() {
           </div>
 
           {/* Dr. Sally Barton-Arwood - Text Only */}
-          <div className="bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-100">
+          <div className="bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-100 mb-12">
             <div className="relative">
               {/* Decorative gradient header */}
               <div className="h-32 bg-gradient-to-r from-earth-green/20 via-fern/10 to-sunlit-amber/20 relative">
@@ -391,6 +391,96 @@ export default function AboutPage() {
                     </p>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+
+          {/* The Reverend Richard Wineland */}
+          <div className="bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-100 mb-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[400px] lg:min-h-[500px]">
+              <div className="order-1 lg:order-1 relative h-80 lg:h-full">
+                <Image
+                  src="/images/richard.webp"
+                  alt="The Reverend Richard Wineland"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-b lg:bg-gradient-to-r from-transparent via-white/20 to-white"></div>
+              </div>
+              
+              <div className="order-2 lg:order-2 p-6 md:p-8 lg:p-12 flex flex-col justify-center relative">
+                <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-white/90 to-transparent lg:hidden"></div>
+                <h3 className="text-2xl md:text-3xl lg:text-4xl font-lato font-bold text-black mb-3 relative z-10">
+                  The Reverend Richard Wineland
+                </h3>
+                <div className="text-base lg:text-lg font-semibold text-fern mb-4 lg:mb-6 border-l-4 border-fern pl-4 relative z-10">
+                  Associate Rector for Evangelism & Parish Life at Christ Church (Episcopal) Cathedral, Nashville
+                </div>
+                <div className="relative z-10 space-y-3 lg:space-y-4">
+                  <p className="text-base lg:text-lg text-black/80 leading-relaxed">
+                    The Rev. Richard Wineland grew up in Central Pennsylvania. He studied at Penn State 
+                    University and Goshen College in Indiana, graduating with a bachelor&apos;s degree in music 
+                    performance. He received a Master of Divinity degree from Mennonite Theological 
+                    Seminary in Indiana, and an MA equivalent in Psychology from Andrews University in 
+                    Michigan. Currently he is completing a Doctor of Ministry degree in missional leadership 
+                    and congregational development at Bexley Seabury Episcopal Seminary in Chicago.
+                  </p>
+                  <p className="text-base lg:text-lg text-black/80 leading-relaxed">
+                    Richard served as a Mennonite and Lutheran pastor for 10 years prior to becoming an 
+                    Episcopal priest, leading congregations in Pennsylvania, Indiana, and Tennessee, and 
+                    has served Episcopal parishes in Indiana and Tennessee since 2005.
+                  </p>
+                  <p className="text-base lg:text-lg text-black/80 leading-relaxed">
+                    Fr. Richard has been involved in many nonprofit organizations throughout his ministry, 
+                    and currently serves on the Boards of the Pastoral Center for Healing and Child Arise-
+                    Tennessee. He has also served on the Board of Directors of two church-wide 
+                    organizations; Recovery Ministries of the Episcopal Church and the Episcopal Peace 
+                    Fellowship. He was the founding Executive Director of the Community Music School of 
+                    Goshen College, in Indiana.
+                  </p>
+                  <p className="text-base lg:text-lg text-black/80 leading-relaxed">
+                    Richard is a lifelong singer and musician, a published composer, and has performed at 
+                    the Grand Ole Opry House and on national television. As a writer he has also had 
+                    articles published in both academic journals and denomination-wide publications.
+                  </p>
+                  <p className="text-base lg:text-lg text-black/80 leading-relaxed">
+                    Richard is married to Lee Armstrong, a musician, poet, and registered nurse. Together 
+                    they have seven adult children, scattered from New York City to Los Angeles.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Libby Dayhuff */}
+          <div className="bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-100">
+            <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[400px] lg:min-h-[500px]">
+              <div className="order-1 lg:order-2 relative h-80 lg:h-full">
+                <Image
+                  src="/images/libby.webp"
+                  alt="Libby Dayhuff"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-b lg:bg-gradient-to-l from-transparent via-white/20 to-white"></div>
+              </div>
+              
+              <div className="order-2 lg:order-1 p-6 md:p-8 lg:p-12 flex flex-col justify-center relative">
+                <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-white/90 to-transparent lg:hidden"></div>
+                <h3 className="text-2xl md:text-3xl lg:text-4xl font-lato font-bold text-black mb-3 relative z-10">
+                  Libby Dayhuff
+                </h3>
+                <div className="text-base lg:text-lg font-semibold text-earth-green mb-4 lg:mb-6 border-l-4 border-earth-green pl-4 relative z-10">
+                  Criminal Defense Attorney, Larsen Law PLLC
+                </div>
+                <p className="text-base lg:text-lg text-black/80 leading-relaxed relative z-10">
+                  My name is Libby Dayhuff, and I am a criminal defense attorney at Larsen Law PLLC in 
+                  Franklin, TN. I grew up in West Tennessee but later moved to Knoxville to attend the 
+                  University of Tennessee where I completed my honors thesis on the effects of parental 
+                  incarceration.
+                </p>
               </div>
             </div>
           </div>
