@@ -219,7 +219,7 @@ export default function AboutPage() {
                   src="/images/bethany.webp"
                   alt="Bethany Roberts Mann"
                   fill
-                  className="object-cover"
+                  className="object-cover object-left lg:object-[90%_center]"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-b lg:bg-gradient-to-r from-transparent via-white/20 to-white"></div>
@@ -233,12 +233,37 @@ export default function AboutPage() {
                 <div className="text-base lg:text-lg font-semibold text-fern mb-4 lg:mb-6 border-l-4 border-fern pl-4 relative z-10">
                   Founder & Executive Director
                 </div>
-                <p className="text-base lg:text-lg text-black/80 leading-relaxed relative z-10">
-                  Bethany Roberts Mann was born in prison and is mother of four and grandmother to one. 
-                  She has been visiting the men on death row for 15 years. She lives intentionally every 
-                  day to break the cycle of poverty one life at a time. She recently founded a non-profit 
-                  called Child Arise, TN that advocates for and works to advance children of the incarcerated.
-                </p>
+                <div className="text-base lg:text-lg text-black/80 leading-relaxed relative z-10 space-y-4">
+                  <p>
+                    Bethany Mann was born in prison and adopted as a toddler. She was raised with love and stability—celebrated each year on her &quot;gotcha day,&quot; and reminded daily of that love by a wooden plaque above her bed that read:
+                  </p>
+                  <blockquote className="italic text-black/70 border-l-4 border-fern pl-4">
+                    &quot;Not flesh of my flesh, not bone of my bone, but still miraculously my own. Never forget for a single minute that you weren&apos;t born under my heart, but in it.&quot;
+                  </blockquote>
+                  <p>
+                    Though deeply loved, Bethany carried early memories shaped by separation, loss, and the hidden impact of parental incarceration. Her biological mother gave birth to her at age 18 while incarcerated and struggling with addiction. Bethany was placed in the custody of the Department of Human Services in Nashville.
+                  </p>
+                  <p>
+                    The reality was hard—but the outcome, providential. Bethany was given access to education, healthcare, and emotional stability. That opportunity broke a generational cycle of poverty—and shaped her life&apos;s work.
+                  </p>
+                  <p>
+                    For the past 15 years, she has visited men on death row and come to believe that:
+                  </p>
+                  <ul className="list-disc list-inside space-y-1 ml-4">
+                    <li>Proximity eradicates stigma</li>
+                    <li>Telling our stories can dismantle shame</li>
+                    <li>And no child should have to carry the weight of incarceration alone</li>
+                  </ul>
+                  <p>
+                    Bethany founded Child Arise Tennessee to offer acceptance, access, and advocacy for children with an incarcerated parent—over 140,000 of them in Tennessee alone. The organization is the first in the state to focus specifically on addressing the collateral consequences these children face: shame, grief, instability, and educational disruption.
+                  </p>
+                  <p>
+                    Child Arise exists to make the invisible visible—one story, one child, one act of support at a time.
+                  </p>
+                  <p>
+                    She&apos;s worked in law, immigration, and small business—but the accomplishment Bethany is proudest of is raising four daughters. She lives with intention every day to break cycles of poverty and build a more compassionate world.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
