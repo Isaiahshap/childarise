@@ -13,7 +13,7 @@ export default function PrivacyPolicyPage() {
   return (
     <div className="min-h-screen bg-clay-beige">
       {/* Hero Section */}
-      <section className="relative py-24 bg-gradient-to-br from-fern/10 via-clay-beige to-earth-green/10">
+      <section className="relative pt-32 pb-24 bg-gradient-to-br from-fern/10 via-clay-beige to-earth-green/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-lato font-bold text-black mb-6">
@@ -146,8 +146,8 @@ export default function PrivacyPolicyPage() {
                 These services have their own privacy policies and terms of use.
               </p>
               <p className="text-black/80 mb-6">
-                Please note that Child Arise Tennessee is awaiting 501(c)(3) tax-exempt approval from the IRS, 
-                and we encourage donors to consult with a tax advisor regarding deductibility.
+                Child Arise Tennessee is a registered 501(c)(3) tax-exempt nonprofit organization. 
+                Donations are tax-deductible to the fullest extent allowed by law.
               </p>
 
               <h2 className="text-2xl font-semibold text-black mb-4">9. Data Retention</h2>

@@ -13,7 +13,7 @@ export default function TermsOfServicePage() {
   return (
     <div className="min-h-screen bg-clay-beige">
       {/* Hero Section */}
-      <section className="relative py-24 bg-gradient-to-br from-fern/10 via-clay-beige to-earth-green/10">
+      <section className="relative pt-32 pb-24 bg-gradient-to-br from-fern/10 via-clay-beige to-earth-green/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-lato font-bold text-black mb-6">
@@ -49,9 +49,9 @@ export default function TermsOfServicePage() {
 
               <h2 className="text-2xl font-semibold text-black mb-4">2. About Child Arise Tennessee</h2>
               <p className="text-black/80 mb-6">
-                Child Arise Tennessee is a registered public benefit nonprofit corporation and charitable 
-                organization in the State of Tennessee. We have applied for 501(c)(3) federal tax-exempt 
-                status with the IRS and are currently awaiting approval.
+                Child Arise Tennessee is a registered 501(c)(3) tax-exempt nonprofit organization 
+                and charitable organization in the State of Tennessee, dedicated to supporting children 
+                and families affected by parental incarceration.
               </p>
 
               <h2 className="text-2xl font-semibold text-black mb-4">3. Services Provided</h2>
@@ -153,15 +153,13 @@ export default function TermsOfServicePage() {
 
               <h2 className="text-2xl font-semibold text-black mb-4">12. Donations and Fundraising</h2>
               <p className="text-black/80 mb-6">
-                Child Arise Tennessee is a registered public benefit nonprofit corporation in Tennessee and is 
-                recognized as a charitable organization by the State. We submitted our application for 501(c)(3) 
-                federal tax-exempt status to the IRS in February 2025 and are currently awaiting approval.
+                Child Arise Tennessee is a registered 501(c)(3) tax-exempt nonprofit organization 
+                in Tennessee, recognized as a charitable organization by both the State and federal government.
               </p>
               <p className="text-black/80 mb-6">
-                Donations may be tax-deductible to the extent allowed by law. Please consult your tax advisor 
-                regarding the deductibility of your contribution. Once our 501(c)(3) determination is received, 
-                we will update donors accordingly. Unless specifically designated, all donations will be used 
-                to support our mission and general operations.
+                Donations to Child Arise Tennessee are tax-deductible to the fullest extent allowed by law. 
+                Unless specifically designated, all donations will be used to support our mission and general operations. 
+                Please consult your tax advisor regarding the deductibility of your specific contribution.
               </p>
 
               <h2 className="text-2xl font-semibold text-black mb-4">13. Termination of Services</h2>

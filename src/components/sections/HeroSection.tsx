@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import Image from 'next/image';
 
@@ -34,8 +34,38 @@ export function HeroSection() {
         />
       </motion.div>
 
+      {/* 501(c)(3) Badge - Floating on Right (Desktop Only) */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0, rotate: -45 }}
+        animate={{ opacity: 1, scale: 1, rotate: 0 }}
+        transition={{ 
+          duration: 0.8, 
+          delay: 1.8,
+          type: "spring",
+          stiffness: 200
+        }}
+        className="hidden lg:block absolute top-32 right-16 z-20"
+      >
+        <div className="relative">
+          {/* Circular Badge */}
+          <div className="w-32 h-32 rounded-full bg-white/95 backdrop-blur-md shadow-2xl border-4 border-fern/30 flex flex-col items-center justify-center p-3 hover:scale-110 transition-transform duration-300">
+            <CheckCircle className="w-8 h-8 text-fern mb-1" />
+            <div className="text-center">
+              <div className="text-sm font-bold text-fern leading-tight">501(c)(3)</div>
+              <div className="text-xs font-semibold text-moss-brown/70 leading-tight">Nonprofit</div>
+            </div>
+          </div>
+          {/* Decorative Ring */}
+          <motion.div
+            animate={{ rotate: 360 }}
+            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+            className="absolute inset-0 rounded-full border-2 border-dashed border-fern/20"
+          />
+        </div>
+      </motion.div>
+
       {/* Content */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:pt-32">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[70vh]">
           {/* Left Column - Content */}
           <div className="text-center lg:text-left">
@@ -77,7 +107,7 @@ export function HeroSection() {
                 delay: 1.3,
                 ease: "easeOut"
               }}
-              className="text-lg md:text-xl lg:text-2xl text-moss-brown/80 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0"
+              className="text-lg md:text-xl lg:text-2xl text-moss-brown/80 mb-6 leading-relaxed max-w-2xl mx-auto lg:mx-0"
             >
               Providing comprehensive support for children and caregivers impacted by parental incarceration through counseling, mentorship, and community connection.
             </motion.p>
@@ -130,6 +160,36 @@ export function HeroSection() {
                 </Button>
               </motion.div>
             </motion.div>
+
+            {/* 501(c)(3) Badge - Mobile Only (Below CTA) */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0, rotate: -45 }}
+              animate={{ opacity: 1, scale: 1, rotate: 0 }}
+              transition={{ 
+                duration: 0.8, 
+                delay: 1.9,
+                type: "spring",
+                stiffness: 200
+              }}
+              className="lg:hidden flex justify-center mt-8"
+            >
+              <div className="relative">
+                {/* Circular Badge */}
+                <div className="w-24 h-24 md:w-28 md:h-28 rounded-full bg-white/95 backdrop-blur-md shadow-2xl border-4 border-fern/30 flex flex-col items-center justify-center p-3">
+                  <CheckCircle className="w-7 h-7 md:w-8 md:h-8 text-fern mb-1" />
+                  <div className="text-center">
+                    <div className="text-xs md:text-sm font-bold text-fern leading-tight">501(c)(3)</div>
+                    <div className="text-[10px] md:text-xs font-semibold text-moss-brown/70 leading-tight">Nonprofit</div>
+                  </div>
+                </div>
+                {/* Decorative Ring */}
+                <motion.div
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                  className="absolute inset-0 rounded-full border-2 border-dashed border-fern/20"
+                />
+              </div>
+            </motion.div>
           </div>
 
           {/* Right Column - Empty space for image visibility on desktop */}
@@ -138,25 +198,26 @@ export function HeroSection() {
       </div>
 
       {/* Scroll Indicator */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 2.0 }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10"
-      >
+      <div className="absolute bottom-8 left-0 right-0 flex justify-center z-10">
         <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-          className="w-6 h-10 border-2 border-moss-brown/50 rounded-full flex justify-center cursor-pointer"
-          whileHover={{ scale: 1.1 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 2.0 }}
         >
           <motion.div
-            animate={{ y: [0, 12, 0] }}
+            animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            className="w-1 h-3 bg-moss-brown/50 rounded-full mt-2"
-          />
+            className="w-6 h-10 border-2 border-moss-brown/50 rounded-full flex justify-center cursor-pointer"
+            whileHover={{ scale: 1.1 }}
+          >
+            <motion.div
+              animate={{ y: [0, 12, 0] }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+              className="w-1 h-3 bg-moss-brown/50 rounded-full mt-2"
+            />
+          </motion.div>
         </motion.div>
-      </motion.div>
+      </div>
     </section>
   );
 } 

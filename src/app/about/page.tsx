@@ -58,7 +58,7 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section 
         ref={heroRef}
-        className="relative py-24 bg-gradient-to-br from-fern/10 via-clay-beige to-earth-green/10 overflow-hidden"
+        className="relative pt-32 pb-24 bg-gradient-to-br from-fern/10 via-clay-beige to-earth-green/10 overflow-hidden"
       >
         <div className="absolute inset-0 bg-gradient-to-r from-fern/5 to-transparent" />
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-sunlit-amber/10 rounded-full blur-3xl" />
@@ -86,10 +86,14 @@ export default function AboutPage() {
               <span className="text-fern">Child Arise</span>{' '}
               <span className="text-earth-green">Tennessee</span>
             </h1>
-            <p className="text-xl md:text-2xl text-black/80 leading-relaxed mb-8">
+            <p className="text-xl md:text-2xl text-black/80 leading-relaxed mb-6">
               Fostering hope, healing, and opportunity for children and families 
               affected by parental incarceration across Tennessee.
             </p>
+            <div className="inline-flex items-center justify-center gap-2 bg-fern/10 rounded-full px-6 py-3 mb-8">
+              <CheckCircle className="w-5 h-5 text-fern" />
+              <span className="text-base font-semibold text-fern">Registered 501(c)(3) Nonprofit Organization</span>
+            </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="primary" size="lg" href="/contact">
                 Get Involved Today

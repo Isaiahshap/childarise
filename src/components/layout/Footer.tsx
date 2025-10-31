@@ -32,6 +32,9 @@ export function Footer() {
                 <div className="text-sm text-black/70 font-medium">
                   Nashville, Tennessee
                 </div>
+                <div className="text-xs text-fern font-semibold mt-1">
+                  501(c)(3) Nonprofit Organization
+                </div>
               </div>
             </div>
             <nav aria-label="Footer" className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8">

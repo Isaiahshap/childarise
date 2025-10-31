@@ -13,7 +13,7 @@ export default function AccessibilityStatementPage() {
   return (
     <div className="min-h-screen bg-clay-beige">
       {/* Hero Section */}
-      <section className="relative py-24 bg-gradient-to-br from-fern/10 via-clay-beige to-earth-green/10">
+      <section className="relative pt-32 pb-24 bg-gradient-to-br from-fern/10 via-clay-beige to-earth-green/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-lato font-bold text-black mb-6">

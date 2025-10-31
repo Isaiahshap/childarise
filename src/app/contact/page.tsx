@@ -106,7 +106,7 @@ export default function ContactPage() {
       {/* Hero Section with Logo */}
       <section 
         ref={heroRef}
-        className="relative py-24 bg-gradient-to-br from-fern/10 via-clay-beige to-earth-green/10 overflow-hidden"
+        className="relative pt-32 pb-24 bg-gradient-to-br from-fern/10 via-clay-beige to-earth-green/10 overflow-hidden"
       >
         <div className="absolute inset-0 bg-gradient-to-r from-fern/5 to-transparent" />
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-sunlit-amber/10 rounded-full blur-3xl" />

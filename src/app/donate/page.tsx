@@ -67,7 +67,7 @@ export default function DonatePage() {
       {/* Hero Section */}
       <section 
         ref={heroRef}
-        className="relative py-24 bg-gradient-to-br from-fern/10 via-clay-beige to-earth-green/10 overflow-hidden"
+        className="relative pt-32 pb-24 bg-gradient-to-br from-fern/10 via-clay-beige to-earth-green/10 overflow-hidden"
       >
         <div className="absolute inset-0 bg-gradient-to-r from-fern/5 to-transparent" />
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-sunlit-amber/10 rounded-full blur-3xl" />
@@ -229,7 +229,7 @@ export default function DonatePage() {
 
 
 
-      {/* Disclaimer Section */}
+      {/* Tax Deductibility Section */}
       <section className="py-12 bg-clay-beige/50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -239,10 +239,10 @@ export default function DonatePage() {
             viewport={{ once: true }}
             className="text-center"
           >
-            <h3 className="text-lg font-lato font-semibold text-moss-brown mb-4">Donation Disclaimer (Pre-501(c)(3) Status Approval)</h3>
+            <h3 className="text-lg font-lato font-semibold text-moss-brown mb-4">Tax-Deductible Donations</h3>
             <div className="bg-white rounded-xl p-6 shadow-sm border border-earth-green/20">
               <p className="text-sm text-black/70 leading-relaxed">
-                Child Arise Tennessee is a registered nonprofit public benefit corporation and charitable organization in the State of Tennessee. We have submitted our application for 501(c)(3) federal tax-exempt status with the IRS (February 2025) and are currently awaiting approval. While donations may be tax-deductible under state law, federal tax-deductibility is not guaranteed until our 501(c)(3) status is officially approved. We will notify donors once our determination is received. Please consult your tax advisor for guidance on charitable contributions.
+                Child Arise Tennessee is a registered 501(c)(3) tax-exempt nonprofit organization. Your donation is tax-deductible to the fullest extent allowed by law. We will provide a receipt for your records following your contribution. Our federal tax ID (EIN) will be included with your donation receipt. Please consult your tax advisor for specific guidance on charitable contributions.
               </p>
             </div>
           </motion.div>

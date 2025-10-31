@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import { AnnouncementBar } from "@/components/layout/AnnouncementBar";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import "./globals.css";
@@ -102,6 +103,7 @@ export default function RootLayout({
           `}
         </Script>
         
+        <AnnouncementBar />
         <Navbar />
         <main className="min-h-screen">
           {children}
