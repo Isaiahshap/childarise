@@ -241,8 +241,11 @@ export default function DonatePage() {
           >
             <h3 className="text-lg font-lato font-semibold text-moss-brown mb-4">Tax-Deductible Donations</h3>
             <div className="bg-white rounded-xl p-6 shadow-sm border border-earth-green/20">
-              <p className="text-sm text-black/70 leading-relaxed">
-                Child Arise Tennessee is a registered 501(c)(3) tax-exempt nonprofit organization. Your donation is tax-deductible to the fullest extent allowed by law. We will provide a receipt for your records following your contribution. Our federal tax ID (EIN) will be included with your donation receipt. Please consult your tax advisor for specific guidance on charitable contributions.
+              <p className="text-sm text-black/70 leading-relaxed mb-3">
+                Child Arise Tennessee is a registered 501(c)(3) tax-exempt nonprofit organization. Your donation is tax-deductible to the fullest extent allowed by law. We will provide a receipt for your records following your contribution. Please consult your tax advisor for specific guidance on charitable contributions.
+              </p>
+              <p className="text-sm text-black/80 font-semibold">
+                Federal Tax ID (EIN): 33-1723186
               </p>
             </div>
           </motion.div>

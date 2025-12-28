@@ -3,10 +3,49 @@ import { Resend } from 'resend';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+// Verify reCAPTCHA token with Google
+async function verifyRecaptcha(token: string): Promise<boolean> {
+  const secretKey = process.env.RECAPTCHA_SECRET_KEY;
+  
+  if (!secretKey) {
+    console.error('RECAPTCHA_SECRET_KEY is not set');
+    return false;
+  }
+
+  try {
+    const response = await fetch('https://www.google.com/recaptcha/api/siteverify', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: `secret=${secretKey}&response=${token}`,
+    });
+
+    const data = await response.json();
+    
+    // Check if verification was successful and score is acceptable (v3 returns score 0.0-1.0)
+    // Typically, scores above 0.5 are considered legitimate
+    return data.success === true && (data.score || 0) > 0.5;
+  } catch (error) {
+    console.error('reCAPTCHA verification error:', error);
+    return false;
+  }
+}
+
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { name, email, phone, subject, message } = body;
+    const { name, email, phone, subject, message, website, recaptchaToken } = body;
+
+    // Honeypot check - if filled, it's a bot
+    if (website) {
+      console.log('Bot detected via honeypot field');
+      // Return success to avoid revealing the honeypot
+      return NextResponse.json(
+        { message: 'Email sent successfully' },
+        { status: 200 }
+      );
+    }
 
     // Validate required fields
     if (!name || !email || !subject || !message) {
@@ -16,10 +55,21 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // Verify reCAPTCHA (only if token is provided and secret key is configured)
+    if (recaptchaToken && process.env.RECAPTCHA_SECRET_KEY) {
+      const isRecaptchaValid = await verifyRecaptcha(recaptchaToken);
+      if (!isRecaptchaValid) {
+        return NextResponse.json(
+          { error: 'reCAPTCHA verification failed. Please try again.' },
+          { status: 400 }
+        );
+      }
+    }
+
     // Send email to Child Arise Tennessee
     await resend.emails.send({
       from: 'Contact Form <noreply@childarisetn.org>', // Use verified domain
-      to: ['bethany@childarisetn.org', 'bethanyrmann@gmail.com'], // Child Arise Tennessee emails
+      to: ['bethany@childarisetn.org'], // Child Arise Tennessee emails
       subject: `Contact Form: ${subject}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
@@ -94,7 +144,7 @@ export async function POST(request: NextRequest) {
             <p style="color: #666; font-size: 14px; margin: 0;">
               <strong>Child Arise Tennessee</strong><br>
               Nashville, Tennessee<br>
-              <a href="mailto:bethanyrmann@gmail.com" style="color: #6C9A74;">bethanyrmann@gmail.com</a> | 
+              <a href="mailto:bethany@childarisetn.org" style="color: #6C9A74;">bethany@childarisetn.org</a> | 
               <a href="tel:6154901844" style="color: #6C9A74;">(615) 490-1844</a>
             </p>
           </div>

@@ -261,6 +261,9 @@ export default function AboutPage() {
                   <p>
                     Bethany founded Child Arise Tennessee to offer acceptance, access, and advocacy for children with an incarcerated parent—over 140,000 of them in Tennessee alone. The organization is the first in the state to focus specifically on addressing the collateral consequences these children face: shame, grief, instability, and educational disruption.
                   </p>
+                  <p className="italic text-black/70 border-l-4 border-fern pl-4">
+                    Bethany Mann is ACES-trained and committed to trauma-informed, child-centered practices in every phase of Child Arise&apos;s work.
+                  </p>
                   <p>
                     Child Arise exists to make the invisible visible—one story, one child, one act of support at a time.
                   </p>
@@ -368,7 +371,7 @@ export default function AboutPage() {
                     Dr. Sally Barton-Arwood
                   </h3>
                   <div className="text-base lg:text-lg font-semibold text-earth-green mb-4 lg:mb-6 border-l-4 border-earth-green pl-4">
-                    Board Member
+                    Board Member & Educator
                   </div>
                   <div className="text-base lg:text-lg text-black/80 leading-relaxed space-y-3 lg:space-y-4">
                     <p>

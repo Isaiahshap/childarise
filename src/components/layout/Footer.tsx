@@ -35,6 +35,9 @@ export function Footer() {
                 <div className="text-xs text-fern font-semibold mt-1">
                   501(c)(3) Nonprofit Organization
                 </div>
+                <div className="text-xs text-black/60 mt-1">
+                  EIN: 33-1723186
+                </div>
               </div>
             </div>
             <nav aria-label="Footer" className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8">

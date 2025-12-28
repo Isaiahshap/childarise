@@ -5,6 +5,17 @@ import { Mail, Phone, MapPin, Send, User, MessageSquare, Loader2, Check } from '
 import { Button } from '@/components/ui/Button';
 import { useRef, useState } from 'react';
 import Image from 'next/image';
+import Script from 'next/script';
+
+// Type declaration for Google reCAPTCHA
+declare global {
+  interface Window {
+    grecaptcha: {
+      ready: (callback: () => void) => void;
+      execute: (siteKey: string, options: { action: string }) => Promise<string>;
+    };
+  }
+}
 
 export default function ContactPage() {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -18,12 +29,14 @@ export default function ContactPage() {
     email: '',
     phone: '',
     subject: '',
-    message: ''
+    message: '',
+    website: '' // Honeypot field
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [error, setError] = useState('');
+  const [recaptchaLoaded, setRecaptchaLoaded] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -35,22 +48,59 @@ export default function ContactPage() {
     if (error) setError('');
   };
 
+  // Load reCAPTCHA token (only if configured)
+  const getRecaptchaToken = async (): Promise<string | null> => {
+    // Skip if no site key is configured
+    if (!process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY) {
+      return null;
+    }
+
+    if (!recaptchaLoaded || typeof window === 'undefined' || !window.grecaptcha) {
+      return null;
+    }
+
+    try {
+      const token = await window.grecaptcha.execute(
+        process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY,
+        { action: 'contact_form' }
+      );
+      return token;
+    } catch (error) {
+      console.error('reCAPTCHA error:', error);
+      return null;
+    }
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     setError('');
 
+    // Honeypot check - if filled, it's a bot
+    if (formData.website) {
+      console.log('Bot detected via honeypot');
+      setIsSubmitting(false);
+      return;
+    }
+
     try {
+      // Get reCAPTCHA token (optional - only if configured)
+      const recaptchaToken = await getRecaptchaToken();
+
       const response = await fetch('/api/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          recaptchaToken
+        }),
       });
 
       if (!response.ok) {
-        throw new Error('Failed to send email');
+        const errorData = await response.json();
+        throw new Error(errorData.error || 'Failed to send email');
       }
 
       const result = await response.json();
@@ -65,14 +115,15 @@ export default function ContactPage() {
         email: '',
         phone: '',
         subject: '',
-        message: ''
+        message: '',
+        website: ''
       });
 
       // Hide success message after 5 seconds
       setTimeout(() => setIsSuccess(false), 5000);
     } catch (err) {
       console.error('Error sending email:', err);
-      setError('Sorry, there was an error sending your message. Please try again or contact us directly at bethany@childarisetn.org');
+      setError(err instanceof Error ? err.message : 'Sorry, there was an error sending your message. Please try again or contact us directly at bethany@childarisetn.org');
     } finally {
       setIsSubmitting(false);
     }
@@ -84,7 +135,7 @@ export default function ContactPage() {
     {
       icon: Mail,
       title: 'Email Us',
-      details: 'bethanyrmann@gmail.com',
+      details: 'bethany@childarisetn.org',
       description: 'Send us an email and we will respond within 24 hours'
     },
     {
@@ -101,8 +152,25 @@ export default function ContactPage() {
     }
   ];
 
+  // Check if reCAPTCHA is configured
+  const hasRecaptcha = typeof process !== 'undefined' && process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
+
   return (
     <div className="min-h-screen">
+      {/* Google reCAPTCHA v3 Script - only load if configured */}
+      {hasRecaptcha && (
+        <Script
+          src={`https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}`}
+          strategy="afterInteractive"
+          onLoad={() => {
+            if (window.grecaptcha) {
+              window.grecaptcha.ready(() => {
+                setRecaptchaLoaded(true);
+              });
+            }
+          }}
+        />
+      )}
       {/* Hero Section with Logo */}
       <section 
         ref={heroRef}
@@ -334,6 +402,20 @@ export default function ContactPage() {
                 </div>
               </div>
 
+              {/* Honeypot field - hidden from users but visible to bots */}
+              <div className="absolute left-[-9999px] opacity-0 pointer-events-none" aria-hidden="true">
+                <label htmlFor="website">Website (leave blank)</label>
+                <input
+                  type="text"
+                  id="website"
+                  name="website"
+                  value={formData.website}
+                  onChange={handleInputChange}
+                  tabIndex={-1}
+                  autoComplete="off"
+                />
+              </div>
+
               {/* Error Message */}
               {error && (
                 <motion.div
@@ -376,8 +458,8 @@ export default function ContactPage() {
                   (615) 490-1844
                 </a>{' '}
                 or email{' '}
-                <a href="mailto:bethanyrmann@gmail.com" className="text-fern font-semibold hover:underline">
-                  bethanyrmann@gmail.com
+                <a href="mailto:bethany@childarisetn.org" className="text-fern font-semibold hover:underline">
+                  bethany@childarisetn.org
                 </a>{' '}
                 directly.
               </p>

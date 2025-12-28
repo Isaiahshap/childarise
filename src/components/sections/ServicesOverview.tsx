@@ -11,44 +11,44 @@ const services = [
     icon: Heart,
     title: 'Emotional & Mental Health Support',
     subtitle: 'Trauma-informed care for healing',
-    description: 'Professional counseling and therapy services designed specifically for children and families navigating the complex emotions of parental incarceration.',
-    features: ['Individual Therapy Sessions', 'Group Therapy Programs', 'School-Based Mental Health Support', 'Crisis Intervention Services'],
-    impact: 'Students show improved emotional regulation and resilience',
+    description: 'Building a trauma-informed approach to connect children and families to appropriate, trusted mental health resources through schools and community partners.',
+    features: ['Connection to individual counseling through partner providers', 'Referral to group-based therapeutic supports', 'Collaboration with school-based mental health teams', 'Crisis support coordination through established community resources'],
+    impact: 'Increased emotional regulation, coping skills, and resilience over time',
     color: 'fern'
   },
   {
     icon: Users,
     title: 'Mentorship & Life Skills',
     subtitle: 'Building resilience through connection',
-    description: 'Matching children with trained mentors who understand their unique journey, focusing on goal setting, life skills, and personal development.',
-    features: ['Shared Experiences Program', 'One-on-One Mentoring', 'Life Skills & Resilience Workshops', 'Youth Leadership Development'],
-    impact: 'Enhanced self-esteem and improved life outcomes',
+    description: 'Developing mentorship and life-skills programming centered on consistent relationships, positive role models, and personal growth.',
+    features: ['Group-based shared experience opportunities', 'Mentorship programming (in development)', 'Life skills and resilience workshops', 'Youth leadership development opportunities'],
+    impact: 'Increased confidence, self-esteem, and long-term life skills',
     color: 'fern'
   },
   {
     icon: GraduationCap,
     title: 'Academic & College Support',
     subtitle: 'Opening pathways to success',
-    description: 'Comprehensive educational support including tutoring, college preparation, and advocacy to ensure academic success and future opportunities.',
-    features: ['Academic Tutoring Services', 'College Readiness Programs', 'Educational Advocacy', 'Scholarship Assistance'],
-    impact: 'Improved academic performance and college enrollment rates',
+    description: 'Supporting children\'s academic success by helping families and schools identify gaps, navigate systems, and access existing educational resources.',
+    features: ['Academic support coordination and referrals', 'College and career readiness guidance (in partnership)', 'Educational advocacy in collaboration with schools', 'Scholarship and resource navigation assistance'],
+    impact: 'Improved educational engagement and long-term academic pathways',
     color: 'fern'
   },
   {
     icon: Video,
     title: 'Family Connection Services',
     subtitle: 'Strengthening family bonds',
-    description: 'Innovative solutions to maintain and strengthen family relationships through technology, transportation assistance, and family bonding activities.',
-    features: ['Virtual Visitation Support', 'Transportation Assistance', 'Family Bonding Programs', 'Communication Facilitation'],
-    impact: 'Stronger family connections and improved relationships',
+    description: 'Exploring and developing supportive strategies — in partnership with existing service providers — that help families stay connected and supported.',
+    features: ['Support for virtual visitation access (through partners)', 'Transportation coordination and resource referrals', 'Family bonding and engagement opportunities', 'Communication support and guidance'],
+    impact: 'Stronger family relationships and sustained connection',
     color: 'fern'
   },
   {
     icon: Home,
     title: 'Caregiver & Household Support',
     subtitle: 'Supporting the whole family',
-    description: 'Empowering caregivers with support groups, resource navigation, and community connections to strengthen the entire family system.',
-    features: ['Caregiver Support Groups', 'Resource Navigation Services', 'Community Connections', 'Family Strengthening Programs'],
+    description: 'Prioritizing caregiver support through connection, information sharing, and access to trusted community resources.',
+    features: ['Caregiver support gatherings (as available)', 'Resource navigation and referrals', 'Community connection and partnership building', 'Family-strengthening education and opportunities'],
     impact: 'Increased caregiver confidence and family stability',
     color: 'fern'
   },
@@ -56,9 +56,9 @@ const services = [
     icon: Calendar,
     title: 'Enrichment & Recreation',
     subtitle: 'Growing through experiences',
-    description: 'Creative and recreational programs that build resilience, self-esteem, and leadership skills while creating positive memories and experiences.',
-    features: ['Summer Enrichment Programs', 'Arts & Creative Therapy', 'Outdoor & Recreational Activities', 'Youth Leadership Opportunities'],
-    impact: 'Enhanced creativity, leadership skills, and self-confidence',
+    description: 'Helping children experience joy, creativity, and belonging through partnerships and special initiatives as capacity allows.',
+    features: ['Seasonal enrichment opportunities', 'Creative and expressive activities (partner-led)', 'Outdoor and recreational experiences', 'Youth leadership and engagement opportunities'],
+    impact: 'Increased creativity, confidence, and positive identity development',
     color: 'fern'
   }
 ];

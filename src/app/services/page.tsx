@@ -12,14 +12,14 @@ const services = [
     title: "Emotional & Mental Health Support",
     subtitle: "Trauma-informed care for healing",
     description:
-      "Professional counseling and therapy services designed specifically for children and families navigating the complex emotions of parental incarceration.",
+      "Child Arise Tennessee is building a trauma-informed approach to emotional and mental health support for children impacted by parental incarceration. Rather than providing clinical services directly, we work to identify needs, reduce barriers, and connect children and families to appropriate, trusted mental health resources through schools and community partners.",
     features: [
-      "Clinical One-on-One Support",
-      "Group Therapy Programs",
-      "School-Based Mental Health Support",
-      "Crisis Intervention Services",
+      "Connection to individual counseling through partner providers",
+      "Referral to group-based therapeutic supports",
+      "Collaboration with school-based mental health teams",
+      "Crisis support coordination through established community resources",
     ],
-    impact: "Students show improved emotional regulation and resilience",
+    impact: "Outcome: Increased emotional regulation, coping skills, and resilience over time",
     image: "/images/1 (2).webp",
   },
   {
@@ -27,14 +27,14 @@ const services = [
     title: "Mentorship & Life Skills",
     subtitle: "Building resilience through connection",
     description:
-      "Matching children with trained mentors who understand their unique journey, focusing on goal setting, life skills, and personal development.",
+      "Child Arise is developing mentorship and life-skills programming centered on consistent relationships, positive role models, and personal growth. These offerings are designed to be implemented in partnership with schools and community organizations as funding and infrastructure allow.",
     features: [
-      "Shared Experiences Program",
-      "One-on-One Mentoring",
-      "Life Skills & Resilience Workshops",
-      "Youth Leadership Development",
+      "Group-based shared experience opportunities",
+      "Mentorship programming (in development)",
+      "Life skills and resilience workshops",
+      "Youth leadership development opportunities",
     ],
-    impact: "Enhanced self-esteem and improved life outcomes",
+    impact: "Outcome: Increased confidence, self-esteem, and long-term life skills",
     image: "/images/2 (1).webp",
   },
   {
@@ -42,14 +42,14 @@ const services = [
     title: "Academic & College Support",
     subtitle: "Opening pathways to success",
     description:
-      "Comprehensive educational support including tutoring, college preparation, and advocacy to ensure academic success and future opportunities.",
+      "Child Arise supports children's academic success by helping families and schools identify gaps, navigate systems, and access existing educational resources. Our role focuses on advocacy, coordination, and partnership rather than direct instruction.",
     features: [
-      "Academic Tutoring Services",
-      "College Readiness Programs",
-      "Educational Advocacy",
-      "Scholarship Assistance",
+      "Academic support coordination and referrals",
+      "College and career readiness guidance (in partnership)",
+      "Educational advocacy in collaboration with schools",
+      "Scholarship and resource navigation assistance",
     ],
-    impact: "Improved academic performance and college enrollment rates",
+    impact: "Outcome: Improved educational engagement and long-term academic pathways",
     image: "/images/3 (1).webp",
   },
   {
@@ -57,14 +57,14 @@ const services = [
     title: "Family Connection Services",
     subtitle: "Strengthening family bonds",
     description:
-      "Innovative solutions to maintain and strengthen family relationships through technology, transportation assistance, and family bonding activities.",
+      "Maintaining healthy family connections is critical for children impacted by incarceration. Child Arise is exploring and developing supportive strategies — in partnership with existing service providers — that help families stay connected and supported.",
     features: [
-      "Virtual Visitation Support",
-      "Transportation Assistance",
-      "Family Bonding Programs",
-      "Communication Facilitation",
+      "Support for virtual visitation access (through partners)",
+      "Transportation coordination and resource referrals",
+      "Family bonding and engagement opportunities",
+      "Communication support and guidance",
     ],
-    impact: "Stronger family connections and improved relationships",
+    impact: "Outcome: Stronger family relationships and sustained connection",
     image: "/images/4 (1).webp",
   },
   {
@@ -72,14 +72,14 @@ const services = [
     title: "Caregiver & Household Support",
     subtitle: "Supporting the whole family",
     description:
-      "Empowering caregivers with support groups, resource navigation, and community connections to strengthen the entire family system.",
+      "Child Arise recognizes that caregivers are essential to a child's stability and success. Our model prioritizes caregiver support through connection, information sharing, and access to trusted community resources.",
     features: [
-      "Caregiver Support Groups",
-      "Resource Navigation Services",
-      "Community Connections",
-      "Family Strengthening Programs",
+      "Caregiver support gatherings (as available)",
+      "Resource navigation and referrals",
+      "Community connection and partnership building",
+      "Family-strengthening education and opportunities",
     ],
-    impact: "Increased caregiver confidence and family stability",
+    impact: "Outcome: Increased caregiver confidence and family stability",
     image: "/images/5 (1).webp",
   },
   {
@@ -87,14 +87,14 @@ const services = [
     title: "Enrichment & Recreation",
     subtitle: "Growing through experiences",
     description:
-      "Creative and recreational programs that build resilience, self-esteem, and leadership skills while creating positive memories and experiences.",
+      "Child Arise is committed to helping children experience joy, creativity, and belonging. Enrichment opportunities are designed to complement academic and emotional support and will be offered through partnerships and special initiatives as capacity allows.",
     features: [
-      "Summer Enrichment Programs",
-      "Arts & Creative Therapy",
-      "Outdoor & Recreational Activities",
-      "Youth Leadership Opportunities",
+      "Seasonal enrichment opportunities",
+      "Creative and expressive activities (partner-led)",
+      "Outdoor and recreational experiences",
+      "Youth leadership and engagement opportunities",
     ],
-    impact: "Enhanced creativity, leadership skills, and self-confidence",
+    impact: "Outcome: Increased creativity, confidence, and positive identity development",
     image: "/images/hero-bg.png",
   },
 ];
@@ -206,7 +206,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* Closing Statement Section */}
       <section className="py-20 bg-gradient-to-br from-fern/10 via-clay-beige to-earth-green/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -215,6 +215,23 @@ export default function ServicesPage() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="text-center bg-white/60 rounded-3xl p-8 md:p-12 border border-white/20 shadow-lg relative z-0"
+          >
+            <p className="text-lg md:text-xl text-black/80 leading-relaxed mb-8 max-w-3xl mx-auto">
+              Child Arise Tennessee is intentionally growing with care, accountability, and community guidance. Our programs will expand as partnerships, funding, and infrastructure allow — always with the goal of providing meaningful, sustainable support rather than duplicating existing services. We believe thoughtful growth is essential to lasting impact.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center"
           >
             <h2 className="text-3xl md:text-4xl font-lato font-bold text-black mb-6">
               Ready to Make a Difference?
