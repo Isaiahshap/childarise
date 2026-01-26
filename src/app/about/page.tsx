@@ -235,7 +235,7 @@ export default function AboutPage() {
                   Bethany Roberts Mann
                 </h3>
                 <div className="text-base lg:text-lg font-semibold text-fern mb-4 lg:mb-6 border-l-4 border-fern pl-4 relative z-10">
-                  Founder & Executive Director
+                  Founder and Executive Director
                 </div>
                 <div className="text-base lg:text-lg text-black/80 leading-relaxed relative z-10 space-y-4">
                   <p>
@@ -295,7 +295,7 @@ export default function AboutPage() {
                   Linda Manning, PhD
                 </h3>
                 <div className="text-base lg:text-lg font-semibold text-earth-green mb-4 lg:mb-6 border-l-4 border-earth-green pl-4 relative z-10">
-                  Clinical Supervisor & Consultant
+                  Board Member
                 </div>
                 <p className="text-base lg:text-lg text-black/80 leading-relaxed relative z-10">
                   Linda Manning, PhD provides supervision and consultation for therapists interested in somatic 
@@ -330,7 +330,7 @@ export default function AboutPage() {
                   Dan Mann
                 </h3>
                 <div className="text-base lg:text-lg font-semibold text-fern mb-4 lg:mb-6 border-l-4 border-fern pl-4 relative z-10">
-                  Board Member & Advocate
+                  Board Member
                 </div>
                 <div className="relative z-10 space-y-3 lg:space-y-4">
                   <p className="text-base lg:text-lg text-black/80 leading-relaxed">
@@ -371,7 +371,7 @@ export default function AboutPage() {
                     Dr. Sally Barton-Arwood
                   </h3>
                   <div className="text-base lg:text-lg font-semibold text-earth-green mb-4 lg:mb-6 border-l-4 border-earth-green pl-4">
-                    Board Member & Educator
+                    Board Member
                   </div>
                   <div className="text-base lg:text-lg text-black/80 leading-relaxed space-y-3 lg:space-y-4">
                     <p>
@@ -447,7 +447,7 @@ export default function AboutPage() {
                   The Reverend Richard Wineland
                 </h3>
                 <div className="text-base lg:text-lg font-semibold text-fern mb-4 lg:mb-6 border-l-4 border-fern pl-4 relative z-10">
-                  Associate Rector for Evangelism & Parish Life at Christ Church (Episcopal) Cathedral, Nashville
+                  Board Member
                 </div>
                 <div className="relative z-10 space-y-3 lg:space-y-4">
                   <p className="text-base lg:text-lg text-black/80 leading-relaxed">
@@ -486,7 +486,7 @@ export default function AboutPage() {
           </div>
 
           {/* Libby Dayhuff */}
-          <div className="bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-100">
+          <div className="bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-100 mb-12">
             <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[400px] lg:min-h-[500px]">
               <div className="order-1 lg:order-2 relative h-80 lg:h-full">
                 <Image
@@ -505,7 +505,7 @@ export default function AboutPage() {
                   Libby Dayhuff
                 </h3>
                 <div className="text-base lg:text-lg font-semibold text-earth-green mb-4 lg:mb-6 border-l-4 border-earth-green pl-4 relative z-10">
-                  Criminal Defense Attorney, Larsen Law PLLC
+                  Board Member
                 </div>
                 <p className="text-base lg:text-lg text-black/80 leading-relaxed relative z-10">
                   My name is Libby Dayhuff, and I am a criminal defense attorney at Larsen Law PLLC in 
@@ -513,6 +513,58 @@ export default function AboutPage() {
                   University of Tennessee where I completed my honors thesis on the effects of parental 
                   incarceration.
                 </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Lucy Hendrickson */}
+          <div className="bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-100">
+            <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[400px] lg:min-h-[500px]">
+              <div className="order-1 lg:order-1 relative h-80 lg:h-full">
+                <Image
+                  src="/images/Lucy.JPEG"
+                  alt="Lucy Hendrickson"
+                  fill
+                  className="object-cover object-center"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-b lg:bg-gradient-to-r from-transparent via-white/20 to-white"></div>
+              </div>
+              
+              <div className="order-2 lg:order-2 p-6 md:p-8 lg:p-12 flex flex-col justify-center relative">
+                <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-white/90 to-transparent lg:hidden"></div>
+                <h3 className="text-2xl md:text-3xl lg:text-4xl font-lato font-bold text-black mb-3 relative z-10">
+                  Lucy Hendrickson
+                </h3>
+                <div className="text-base lg:text-lg font-semibold text-fern mb-4 lg:mb-6 border-l-4 border-fern pl-4 relative z-10">
+                  Board Member
+                </div>
+                <div className="relative z-10 space-y-3 lg:space-y-4">
+                  <p className="text-base lg:text-lg text-black/80 leading-relaxed">
+                    Lucy is a Nashville native with seven years of experience at a prominent, nationally 
+                    recognized nonprofit, where she built a strong foundation in advocacy, community care, 
+                    and support for vulnerable populations.
+                  </p>
+                  <p className="text-base lg:text-lg text-black/80 leading-relaxed">
+                    Her commitment to justice and human dignity was shaped early in life through her 
+                    family&apos;s meaningful relationships with individuals on death row. These relationships 
+                    taught Lucy that people are more than the worst thing they have ever done, and that 
+                    compassion—when practiced consistently and courageously—can be a powerful force for 
+                    change.
+                  </p>
+                  <p className="text-base lg:text-lg text-black/80 leading-relaxed">
+                    Through her work with Child Arise, Lucy brings together professional experience and 
+                    lived perspective, guided by empathy, respect, and a deep belief in the inherent worth 
+                    of every person. She is especially passionate about supporting children and families 
+                    impacted by incarceration and working toward systems that are more humane, responsive, 
+                    and rooted in care.
+                  </p>
+                  <p className="text-base lg:text-lg text-black/80 leading-relaxed">
+                    Lucy&apos;s work is grounded in the belief that meaningful change begins with 
+                    relationship—and that when children and families are met with dignity, stability, and 
+                    support, communities are strengthened for generations to come.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
