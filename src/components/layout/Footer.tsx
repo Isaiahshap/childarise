@@ -70,12 +70,12 @@ export function Footer() {
             <Link href="/accessibility" className="text-black/60 hover:text-earth-green transition-colors">Accessibility</Link>
           </div>
           <a 
-            href="https://www.yeshaya.dev" 
+            href="https://www.causehouse.co" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-black/60 hover:text-earth-green transition-colors inline-flex items-center gap-1"
           >
-            Made with ❤️ by yeshaya.dev
+            Made with ❤️ by CauseHouse
           </a>
         </div>
       </div>
