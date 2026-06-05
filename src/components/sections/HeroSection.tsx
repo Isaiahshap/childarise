@@ -4,7 +4,7 @@ import { FadeInSection } from '@/components/ui/FadeIn';
 
 export function HeroSection() {
   return (
-    <FadeInSection instant className="relative min-h-[75vh] md:min-h-[80vh] flex items-end">
+    <FadeInSection instant className="relative min-h-[62vh] md:min-h-[58vh] lg:min-h-[56vh] flex items-start">
       <div className="absolute inset-0 z-0 photo-wrap">
         <Image
           src="/images/hro.png"
@@ -18,7 +18,7 @@ export function HeroSection() {
 
       <div className="hero-radial-overlay" aria-hidden="true" />
 
-      <div className="relative z-10 w-full pt-32 pb-16 md:pb-24">
+      <div className="relative z-10 w-full pt-40 pb-12 md:pt-48 md:pb-14 lg:pt-52">
         <div className="section-container">
           <div className="relative max-w-xl md:max-w-2xl lg:max-w-[34rem] text-left">
             <div className="relative">

@@ -31,7 +31,7 @@ export function PageHero({
   const hasSideMedia = Boolean(image || media);
 
   return (
-    <FadeInSection instant className="pt-32 md:pt-36 pb-16 md:pb-20 bg-paper section-divider">
+    <FadeInSection instant className="pt-36 md:pt-52 lg:pt-56 pb-12 md:pb-14 bg-paper section-divider">
       <div className="section-container">
         {hasSideMedia && media ? (
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-start">
