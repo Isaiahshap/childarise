@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { PageHero } from '@/components/ui/PageHero';
 import { FadeInSection } from '@/components/ui/FadeIn';
+import { SafetySection } from '@/components/sections/SafetySection';
 
 const missionFocus = [
   'Trauma-informed mental health support',
@@ -133,6 +134,8 @@ export default function AboutPage() {
           </div>
         </div>
       </FadeInSection>
+
+      <SafetySection />
 
       <FadeInSection className="editorial-section tone-stone section-divider">
         <div className="section-container">
