@@ -1,11 +1,8 @@
-'use client';
-
-import { motion } from 'framer-motion';
-import { cn } from '@/lib/utils';
 import Link from 'next/link';
+import { cn } from '@/lib/utils';
 
 interface ButtonProps {
-  variant?: 'primary' | 'secondary' | 'outline';
+  variant?: 'primary' | 'ghost' | 'donate' | 'text' | 'outline' | 'secondary';
   size?: 'sm' | 'md' | 'lg';
   children: React.ReactNode;
   href?: string;
@@ -16,77 +13,51 @@ interface ButtonProps {
   type?: 'button' | 'submit' | 'reset';
 }
 
-export function Button({ 
-  variant = 'primary', 
-  size = 'md', 
-  children, 
+export function Button({
+  variant = 'primary',
+  size = 'md',
+  children,
   href,
   external = false,
   className,
   onClick,
   disabled = false,
-  type = 'button'
+  type = 'button',
 }: ButtonProps) {
-  const baseClasses = "inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed";
-  
+  const baseClasses = 'inline-flex items-center justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed';
+
+  const resolvedVariant =
+    variant === 'outline' || variant === 'secondary' ? 'ghost' : variant;
+
   const variantClasses = {
-    primary: "bg-fern text-white hover:bg-fern-dark shadow-md hover:shadow-lg",
-    secondary: "bg-sunlit-amber text-moss-brown hover:bg-amber-dark shadow-md hover:shadow-lg",
-    outline: "border-2 border-fern text-fern hover:bg-fern hover:text-white"
+    primary: 'btn-primary',
+    ghost: 'btn-ghost',
+    donate: 'btn-donate',
+    text: 'btn-ghost',
   };
-  
+
   const sizeClasses = {
-    sm: "px-4 py-2 text-sm",
-    md: "px-6 py-3 text-base",
-    lg: "px-8 py-4 text-lg"
+    sm: 'text-sm',
+    md: '',
+    lg: '',
   };
 
-  const classes = cn(
-    baseClasses,
-    variantClasses[variant],
-    sizeClasses[size],
-    className
-  );
-
-  const motionProps = {
-    whileHover: { scale: 1.02 },
-    whileTap: { scale: 0.98 },
-    transition: { type: "spring" as const, stiffness: 300, damping: 20 }
-  };
+  const classes = cn(baseClasses, variantClasses[resolvedVariant], sizeClasses[size], className);
 
   if (href) {
     if (external) {
       return (
-        <motion.a
-          href={href}
-          className={classes}
-          target="_blank"
-          rel="noopener noreferrer"
-          {...motionProps}
-        >
+        <a href={href} className={classes} target="_blank" rel="noopener noreferrer">
           {children}
-        </motion.a>
+        </a>
       );
     }
-    
-    return (
-      <Link href={href} className={classes}>
-        <motion.span {...motionProps} className="w-full h-full flex items-center justify-center">
-          {children}
-        </motion.span>
-      </Link>
-    );
+    return <Link href={href} className={classes}>{children}</Link>;
   }
 
   return (
-    <motion.button
-      type={type}
-      className={classes}
-      onClick={onClick}
-      disabled={disabled}
-      {...motionProps}
-    >
+    <button type={type} className={classes} onClick={onClick} disabled={disabled}>
       {children}
-    </motion.button>
+    </button>
   );
-} 
+}
