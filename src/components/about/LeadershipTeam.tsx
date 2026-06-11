@@ -12,36 +12,22 @@ export function LeadershipTeam() {
               bioColumns
               >
               <p>
-              Bethany Mann was born in prison and adopted as a toddler. She was raised with love and stability—celebrated each year on her &quot;gotcha day,&quot; and reminded daily of that love by a wooden plaque above her bed that read:
-              </p>
-              <blockquote>
-              &quot;Not flesh of my flesh, not bone of my bone, but still miraculously my own. Never forget for a single minute that you weren&apos;t born under my heart, but in it.&quot;
-              </blockquote>
-              <p>
-              Though deeply loved, Bethany carried early memories shaped by separation, loss, and the hidden impact of parental incarceration. Her biological mother gave birth to her at age 18 while incarcerated and struggling with addiction. Bethany was placed in the custody of the Department of Human Services in Nashville.
+              Bethany Roberts Mann is the founder and executive director of Child Arise Tennessee, a nonprofit organization supporting children and caregivers impacted by parental incarceration.
               </p>
               <p>
-              The reality was hard—but the outcome, providential. Bethany was given access to education, healthcare, and emotional stability. That opportunity broke a generational cycle of poverty—and shaped her life&apos;s work.
+              Born to an incarcerated mother and adopted as a toddler, Bethany&apos;s personal history informs her long-standing commitment to addressing the often-overlooked impact of incarceration on children and families. Her work is rooted in the belief that stable relationships, early support, and community connection can interrupt cycles of trauma and instability.
               </p>
               <p>
-              For the past 15 years, she has visited men on death row and come to believe that:
-              </p>
-              <ul>
-              <li>Proximity eradicates stigma</li>
-              <li>Telling our stories can dismantle shame</li>
-              <li>And no child should have to carry the weight of incarceration alone</li>
-              </ul>
-              <p>
-              Bethany founded Child Arise Tennessee to offer acceptance, access, and advocacy for children with an incarcerated parent—over 140,000 of them in Tennessee alone. The organization is the first in the state to focus specifically on addressing the collateral consequences these children face: shame, grief, instability, and educational disruption.
-              </p>
-              <blockquote>
-              Bethany Mann is ACES-trained and committed to trauma-informed, child-centered practices in every phase of Child Arise&apos;s work.
-              </blockquote>
-              <p>
-              Child Arise exists to make the invisible visible—one story, one child, one act of support at a time.
+              For more than 15 years, Bethany has worked in advocacy and prison outreach, including consistent visitation work on Tennessee&apos;s death row. Through those relationships, she became increasingly aware of the collateral consequences incarceration places on children, caregivers, and family systems.
               </p>
               <p>
-              She&apos;s worked in law, immigration, and small business—but the accomplishment Bethany is proudest of is raising four daughters. She lives with intention every day to break cycles of poverty and build a more compassionate world.
+              Under her leadership, Child Arise Tennessee partners with schools, caregivers, and community organizations to provide direct support, caregiver engagement, resource coordination, and advocacy for children impacted by parental incarceration. The organization is currently developing school-based support models and community partnerships within Metro Nashville Public Schools.
+              </p>
+              <p>
+              Bethany is ACES-trained and committed to trauma-informed, child-centered practices in all areas of Child Arise&apos;s work. Her professional background includes experience in law, immigration services, small business operations, and nonprofit leadership.
+              </p>
+              <p>
+              She lives in Nashville with her husband and a ridiculous number of animals.
               </p>
               </LeaderCard>
             <LeaderCard
@@ -92,7 +78,14 @@ export function LeadershipTeam() {
               from Death Row to the State Capitol in order to present the Governor with petitions.
               </p>
               </LeaderCard>
-            <LeaderCard name="Dr. Sally Barton-Arwood" role="Board Member" bioColumns>
+            <LeaderCard
+              name="Dr. Sally Barton-Arwood"
+              role="Board Member"
+              image="/images/sally.webp"
+              imageAlt="Dr. Sally Barton-Arwood"
+              imageClassName="object-cover object-top"
+              bioColumns
+            >
               <p>
               Dr. Sally Barton-Arwood brings over 30 years of experience in education, child advocacy, and
               trauma-informed practice to her role as a board member for Child Arise Tennessee. A lifelong

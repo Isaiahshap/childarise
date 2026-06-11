@@ -21,6 +21,11 @@ export const leadershipPhotos: LeadershipPhoto[] = [
     imageClassName: 'object-cover object-center',
   },
   {
+    name: 'Dr. Sally Barton-Arwood',
+    image: '/images/sally.webp',
+    imageClassName: 'object-cover object-top',
+  },
+  {
     name: 'The Reverend Richard Wineland',
     image: '/images/richard.webp',
     imageClassName: 'object-cover object-center',
